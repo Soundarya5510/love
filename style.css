@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+*::selection {
+    background: #7d2ae8;
+    color: #fff;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #FFF;
+}
+.wrapper {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background: #FFF;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+i {
+    font-size: 7.5em;
+    color: #E10600;
+    border: 5px solid transparent;
+    outline: 3px solid #E10600;
+    border-radius: 50%;
+}
+h2 {
+    font-size: 3em;
+    color: #E10600;
+    margin: 15px 0;
+}
+.btn-group {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+button {
+    position: absolute;
+    width: 150px;
+    height: inherit;
+    font-size: 1.2em;
+    color: #FFF;
+    font-weight: 600;
+    border-radius: 30px;
+    border: 2px solid #FFF;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+button:nth-child(1) {
+    margin-left: -200px;
+    background: #E10600;
+}
+button:nth-child(2) {
+    margin-right: -200px;
+    color: #E10600;
+}
+/* Floating Hearts Animation */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #E10600;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 75%, 18% 100%, 0% 38%);
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) translateX(-10vw) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 5;
+    }
+    100% {
+        transform: translateY(-10vh) translateX(10vw) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Delay the animation for each heart */
+.heart:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+.heart:nth-child(1) {
+    left: 30%;
+    animation-delay: 1s;
+}
+.heart:nth-child(3) {
+    left: 40%;
+    animation-delay: 0s;
+}
+.heart:nth-child(4) {
+    left: 50%;
+    animation-delay: 1s;
+}
+.heart:nth-child(5) {
+    left: 60%;
+    animation-delay: 0s;
+}
+.heart:nth-child(5) {
+    left: 70%;
+    animation-delay: 1s;
+  }
+.heart:nth-child(5) {
+    left: 80%;
+    animation-delay: 0s;
+  }
+.heart:nth-child(5) {
+    left: 90%;
+    animation-delay: 1s;
